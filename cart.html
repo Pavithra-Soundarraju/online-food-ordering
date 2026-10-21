@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shopping Cart - Foodie</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>🛒 My Shopping Cart</h1>
+        <p>Review your selected meals</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="favorites.html">My Favorites</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="cart-container"></div>
+
+        <section id="cart-summary">
+            <h2>Total: ₹<span id="cart-total">0</span></h2>
+            <button id="checkout-button" type="button">Place Order</button>
+            <p id="order-message" role="status"></p>
+        </section>
+    </main>
+</body>
+</html>

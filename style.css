@@ -1,0 +1,380 @@
+
+/* Apply basic styles to the entire page */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Website heading section */
+header {
+    background-color: #ff6b35;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+/* Main content */
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Search and category section */
+.search-section {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+/* Search input */
+#search-input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Category dropdown */
+#category-filter {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+}
+
+/* Search button */
+#search-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ff6b35;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #e85520;
+}
+
+/* Menu heading */
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Mobile responsive design */
+@media (max-width: 600px) {
+    .search-section {
+        flex-direction: column;
+    }
+
+    #search-input,
+    #category-filter,
+    #search-button {
+        width: 100%;
+    }
+}
+/* Food cards layout */
+#food-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* Individual food card */
+.food-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.food-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.food-card h3 {
+    margin-bottom: 8px;
+}
+
+#status-message {
+    margin-bottom: 20px;
+}
+
+.food-card {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+}
+
+#back-button {
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    background-color: #ff6b35;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#recipe-container img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+#recipe-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.6;
+}
+
+/* Favorites section */
+#favorites-section {
+    margin-top: 40px;
+}
+
+#favorites-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.food-card {
+    position: relative;
+}
+
+.favorite-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    color: #e63946;
+    font-size: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.favorite-icon:hover {
+    transform: scale(1.1);
+}
+
+
+
+.add-cart-button,
+.cart-card-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 44px;
+    margin-top: 10px;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    background-color: #ff6b35;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.add-cart-button {
+    cursor: pointer;
+}
+
+.cart-card-controls {
+    justify-content: space-between;
+    gap: 6px;
+}
+
+.cart-card-controls span {
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.cart-card-controls button {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    background-color: white;
+    color: #ff6b35;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.favorite-button:hover {
+    background-color: #ffd0d0;
+}
+
+
+/* Shopping cart */
+#cart-section {
+    margin-top: 40px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.cart-item img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item button,
+#checkout-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cart-item button {
+    background-color: #ffe5e5;
+    color: #c62828;
+}
+
+#checkout-button {
+    background-color: #ff6b35;
+    color: white;
+    padding: 12px 20px;
+}
+
+#cart-summary {
+    margin-top: 20px;
+    text-align: right;
+}
+
+@media (max-width: 600px) {
+    .cart-item {
+        flex-wrap: wrap;
+    }
+
+    #cart-summary {
+        text-align: left;
+    }
+}
+
+
+.add-cart-button {
+    background-color: #ff6b35;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.add-cart-button:hover {
+    background-color: #e85520;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+nav a {
+    color: rgb(29, 28, 28);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.cart-card-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+    min-height: 42px;
+    margin-top: 10px;
+    padding: 5px 8px;
+    box-sizing: border-box;
+    background-color: #ff6b35;
+    color: white;
+    border-radius: 6px;
+}
+
+.cart-card-controls span {
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.cart-card-controls button {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    color: #ff6b35;
+    font-size: 22px;
+   
+    cursor: pointer;
+}
+
+.cart-card-controls button:hover {
+    background-color: #ffe5d9;
+}

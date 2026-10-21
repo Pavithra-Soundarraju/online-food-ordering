@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie - Online Food Ordering</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Foodie</h1>
+        <p>Discover delicious food near you!</p>
+    </header>
+
+    <nav>
+    <a href="index.html">Home</a>
+    <a href="favorites.html">❤️ My Favorites</a>
+    <a href="cart.html">🛒 Shopping Cart</a>
+</nav>
+
+    <main>
+        <section class="search-section">
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Search for food..."
+            >
+
+            <select id="category-filter">
+    <option value="all">All Meals</option>
+    <option value="Chicken">Chicken</option>
+    <option value="Seafood">Seafood</option>
+    <option value="Vegetarian">Vegetarian</option>
+    <option value="Beef">Beef</option>
+    <option value="Dessert">Dessert</option>
+</select>
+
+            <button id="search-button">Search</button>
+        </section>
+
+        <section>
+            <h2>Our Menu</h2>
+            <p id="status-message">Loading food menu...</p>
+            <div id="food-container"></div>
+        </section>
+
+        <section id="recipe-section" hidden>
+    <button id="back-button">Back to Menu</button>
+    <div id="recipe-container"></div>
+</section>
+
+
+<section id="favorites-section">
+    <h2>❤️ My Favorites</h2>
+    <div id="favorites-container"></div>
+</section>
+
+
+<button
+    type="button"
+    class="add-cart-button"
+    data-cart-add="${meal.idMeal}"
+>
+    Add to Cart
+</button>
+
+
+
+<section id="cart-section">
+    <h2>🛒 My Shopping Cart</h2>
+
+    <div id="cart-container">
+        <p>Your cart is empty.</p>
+    </div>
+
+    <div id="cart-summary">
+        <h3>Total: ₹<span id="cart-total">0</span></h3>
+        <button id="checkout-button" type="button">
+            Place Order
+        </button>
+    </div>
+
+    <p id="order-message" role="status"></p>
+</section>
+
+    </main>
+    <script src="app.js" defer></script>
+
+</body>
+</html>
